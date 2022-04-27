@@ -46,11 +46,11 @@ function handleGuess(correctSpot, userGuess) {
     // then add the face class to that element so that the face shows up
     document.getElementById(`${correctSpot}-container`).classList.add('face');
     // then if the user guess is correct, increment the correct guesses
-    if (userGuess === correctSpot) {
+    if (userGuess === correctSpot){
         correctGuesses++;
     }
     // update the DOM to show this change to the user (including the losses, not tracked directly in state)
-    totalEl.textContent = totalGuesses;
     winsEl.textContent = correctGuesses;
+    totalEl.textContent = totalGuesses;
     lossesEl.textContent = totalGuesses - correctGuesses;
 }
